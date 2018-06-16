@@ -20,7 +20,7 @@ class Song
     new_song = self.new
     new_song.name = song
     #new_song.save
-    return new_song.name
+    #return new_song.name
   end
   
 end
