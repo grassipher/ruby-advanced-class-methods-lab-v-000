@@ -40,4 +40,10 @@ class Song
     end
   end
   
+  def self.alphabetical
+    @@all.sort do |a,b|
+      a <=> b
+    end
+  end
+  
 end
