@@ -40,10 +40,7 @@ class Song
   end
   
   def self.alphabetical
-    self.all.sort! do |a,b|
-      a <=> b
-    end
-    return self.all
+    self.all.sort_by {|obj| obj}
   end
   
   def self.new_from_filename(filename)
