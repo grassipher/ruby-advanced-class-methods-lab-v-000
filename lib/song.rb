@@ -44,6 +44,7 @@ class Song
     @@all.sort do |a,b|
       a <=> b
     end
+    return @@all
   end
   
 end
