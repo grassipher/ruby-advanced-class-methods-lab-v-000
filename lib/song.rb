@@ -54,7 +54,10 @@ class Song
   end
   
   def self.create_from_filename(filename)
-    
+    file_array = filename.split(" - ")
+    file_array[1] = file_array[1].slice(0,file_array[1].length-4)
+    song = self.create_by_name(file_array[1])
+    song.artist_name = file_array[0]
   end
   
   def self.destroy_all
