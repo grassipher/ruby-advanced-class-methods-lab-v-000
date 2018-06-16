@@ -50,7 +50,7 @@ class Song
     file_array = filename.split(" - ")
     #file_array[1] = file_array[1].slice(0,file_array[1].length-3)
     song = self.create_by_name(file_array[0])
-    #song.artist_name = file_array[1]
+    song.artist_name = file_array[1]
   end
   
   def self.create_from_filename(filename)
