@@ -48,7 +48,8 @@ class Song
   end
   
   def self.new_from_filename(filename)
-    file_array = filename.split(/[-.]/)
+    file_array = filename.split(" - ")
+    file_array[1] = file_array[1].splice(0,file_array[1].length-3)
     file_array.each {|element| file_array.delete(element) if element == "mp3"}
     song = self.new
     song.name = file_array[0]
